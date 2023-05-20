@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link href="/content/bootstrap-5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <title>Book</title>
+</head>
+<body ng-app="my-app">
+    <div ng-controller="bookSearchCtrl" class="container mt-3">
+        <h3>Search Book Information</h3>
+        <form  ng-submit="searchBook()" novalidate>
+            <div class="mb-3 mt-3">
+                <label for="bookname" class="form-label">Book Name</label>
+                <input type="text" ng-model="bookname" class="form-control">
+            </div>
+            
+            <div class="mb-3 mt-3">
+                <label for="publisherage" class="form-label">Publisher Age</label>
+                <select name="publisherage">
+                    <option value="10">10-20</option>
+                    <option value="30">30-40</option>
+                    <option value="50">50-60</option>
+                    <option value="30">30-40</option>
+                    <option value="30">30-40</option>
+                </select>
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="booktype" class="form-label">Book Type</label>
+                <input type="checkbox" checked value="sci-fi" ng-model="booktype">sci-fi
+                <input type="checkbox" value="drama" ng-model="booktype">drama
+                <input type="checkbox" value="novel" ng-model="booktype">novel
+                
+               
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+    <br>
+    <br>
+
+   
+    <script src="/app/libs/angular-1.8.2/angular.min.js"></script>
+    <script src="/content/bootstrap-5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="/app/controllers/Book/searchBook.js"></script>
+    
+</body>
+</html>
